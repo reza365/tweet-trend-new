@@ -16,7 +16,7 @@ environment{
         }
     }
 }
-def imageName = 'valaxy01.jfrog.io/valaxy-docker/ttrend'
+def imageName = 'test-image'
 def version   = '2.1.2'
 stage(" Docker Build ") {
   steps {
