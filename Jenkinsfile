@@ -16,3 +16,14 @@ environment{
         }
     }
 }
+def imageName = 'valaxy01.jfrog.io/valaxy-docker/ttrend'
+def version   = '2.1.2'
+stage(" Docker Build ") {
+  steps {
+    script {
+       echo '<--------------- Docker Build Started --------------->'
+       app = docker.build(imageName+":"+version)
+       echo '<--------------- Docker Build Ends --------------->'
+    }
+  }
+}
